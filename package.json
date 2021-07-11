@@ -18,7 +18,8 @@
   "homepage": "https://github.com/otivisan22/otis-fit-tracker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.13.2"
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
