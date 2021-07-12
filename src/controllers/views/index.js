@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const { workout } = require("../../models/workout");
 
 const renderHomePage = (req, res) => {
   res.sendFile(path.join(__dirname, "../../../public/index.html"));
