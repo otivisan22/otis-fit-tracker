@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 4004;
 
 const app = express();
 
+const api = require("./routes/api");
+const html = require("./routes/html");
+
+app.use = ("/", api);
+app.use = ("/", html);
+
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
