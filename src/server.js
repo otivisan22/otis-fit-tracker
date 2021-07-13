@@ -9,7 +9,7 @@ const app = express();
 const api = require("./routes/api");
 const html = require("./routes/html");
 
-app.use = ("/", api);
+app.use = ("/api/", api);
 app.use = ("/", html);
 
 app.use(logger("dev"));

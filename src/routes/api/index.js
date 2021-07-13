@@ -15,6 +15,6 @@ router.post("/", createWorkout);
 
 router.put("/:id", updateWorkout);
 
-//router.get("/", getWorkoutRange);
+router.get("/", getWorkoutRange);
 
 module.exports = router;

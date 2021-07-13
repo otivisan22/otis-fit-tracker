@@ -1,4 +1,4 @@
-const { workout } = require("../../models/workout");
+const { workout } = require("../../models/Workout");
 
 const renderHomePage = (req, res) => {
   res.sendFile(path.join(__dirname, "../../../public/index.html"));
