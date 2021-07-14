@@ -12,7 +12,8 @@ const getLastWorkout = async (req, res) => {
 
     return res.json(lastWorkout);
   } catch (error) {
-    res.json();
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render last workout" });
   }
 };
 const createWorkout = async (req, res) => {
@@ -41,7 +42,20 @@ const updateWorkout = async (req, res) => {
 };
 const getWorkoutRange = async (req, res) => {
   try {
-  } catch (error) {}
+    const lastWorkout = await Workout.aggregate([
+      {
+        $addFields: {
+          totalDuration: { $sum: "$exercises.duration" },
+        },
+      },
+    ])
+      .sort({ _id: -1 })
+      .limit(7);
+    return res.json(lastWorkout);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to get range workout" });
+  }
 };
 
 module.exports = {
