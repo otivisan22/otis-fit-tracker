@@ -1,11 +1,15 @@
 const { Workout } = require("../../models");
 
+const { Router } = require("express");
+
 const {
   getWorkouts,
   createWorkout,
   updateWorkout,
   getWorkoutRange,
 } = require("../../controllers/api/workouts");
+
+const router = Router();
 
 router.get("/workouts", getWorkouts);
 router.post("/workout", createWorkout);

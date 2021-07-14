@@ -37,7 +37,17 @@ const createWorkout = async (req, res) => {
 };
 const updateWorkout = async (req, res) => {
   try {
-  } catch (error) {}
+    const { id } = req.params;
+    const exercise = req.body;
+    const updateWorkout = Workout.findByIdAndUpdate(
+      id,
+      { $push: { exercises: exercise } },
+      { new: true }
+    );
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to update a workout" });
+  }
 };
 const getWorkoutRange = async (req, res) => {
   try {
