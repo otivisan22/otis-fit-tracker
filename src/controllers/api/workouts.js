@@ -1,8 +1,8 @@
-const Workout = require("../../models");
+const db = require("../../models");
 
 const getAllWorkouts = async (req, res) => {
   try {
-    const lastWorkout = await Workout.aggregate([
+    const lastWorkout = await db.Workout.aggregate([
       {
         $addFields: {
           totalDuration: { $sum: "$exercises.duration" },
@@ -16,20 +16,22 @@ const getAllWorkouts = async (req, res) => {
     return res.status(500).json({ error: "Failed to get workout" });
   }
 };
+
 const createWorkout = async (req, res) => {
   try {
-    const workout = await Workout.create({});
+    const workout = await db.Workout.create({});
     return res.json(workout);
   } catch (error) {
     console.log(error.message);
     return res.status(500).json({ error: "Failed to create workout" });
   }
 };
+
 const updateWorkout = async (req, res) => {
   try {
     const { id } = req.params;
     const exercise = req.body;
-    const updatedWorkout = Workout.findByIdAndUpdate(
+    const updatedWorkout = await db.Workout.findByIdAndUpdate(
       id,
       { $push: { exercises: exercise } },
       { new: true }
@@ -42,7 +44,7 @@ const updateWorkout = async (req, res) => {
 };
 const getWorkoutRange = async (req, res) => {
   try {
-    const lastWorkout = await Workout.aggregate([
+    const lastWorkout = await db.Workout.aggregate([
       {
         $addFields: {
           totalDuration: { $sum: "$exercises.duration" },

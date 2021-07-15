@@ -12,6 +12,6 @@ const router = Router();
 router.get("/workouts", getAllWorkouts);
 router.post("/workouts", createWorkout);
 router.put("/workouts/:id", updateWorkout);
-router.get("workouts/range", getWorkoutRange);
+router.get("/workouts/range", getWorkoutRange);
 
 module.exports = router;
