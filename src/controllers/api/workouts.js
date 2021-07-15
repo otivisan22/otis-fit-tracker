@@ -1,6 +1,6 @@
 const Workout = require("../../models");
 
-const getLastWorkout = async (req, res) => {
+const getAllWorkouts = async (req, res) => {
   try {
     const lastWorkout = await Workout.aggregate([
       {
@@ -13,7 +13,7 @@ const getLastWorkout = async (req, res) => {
     return res.json(lastWorkout);
   } catch (error) {
     console.log(error.message);
-    return res.status(500).json({ error: "Failed to render last workout" });
+    return res.status(500).json({ error: "Failed to get workout" });
   }
 };
 const createWorkout = async (req, res) => {
@@ -59,7 +59,7 @@ const getWorkoutRange = async (req, res) => {
 };
 
 module.exports = {
-  getLastWorkout,
+  getAllWorkouts,
   updateWorkout,
   createWorkout,
   getWorkoutRange,
