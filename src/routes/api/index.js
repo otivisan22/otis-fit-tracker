@@ -1,5 +1,3 @@
-const { Workout } = require("../../models");
-
 const { Router } = require("express");
 
 const {
@@ -12,13 +10,8 @@ const {
 const router = Router();
 
 router.get("/workouts", getLastWorkout);
-router.post("/workout", createWorkout);
-router.put("/workout/:id", updateWorkout);
-router.get("/range", getWorkoutRange);
+router.post("/workouts", createWorkout);
+router.put("/workouts/:id", updateWorkout);
+router.get("workouts/range", getWorkoutRange);
 
-module.exports = {
-  getLastWorkout,
-  createWorkout,
-  updateWorkout,
-  getWorkoutRange,
-};
+module.exports = router;
