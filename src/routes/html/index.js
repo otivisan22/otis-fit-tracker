@@ -4,7 +4,7 @@ const {
   renderHomePage,
   renderStatsPage,
   renderExercisePage,
-} = require("../../controllers/views/index");
+} = require("../../controllers/views");
 
 const router = Router();
 
