@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
+const { DB_URL, MONGOOSE_OPTIONS } = require("../seeders/config");
+
 mongoose.connect(DB_URL, MONGOOSE_OPTIONS);
 
 const workoutSeed = [
