@@ -1,17 +1,14 @@
-# otis-fit-tracker
-
 <h1>Otis Fit Tracker</h1>
 
 <h2> Table of Contents </h2>
 
-- [otis-fit-tracker](#otis-fit-tracker)
-  - [Project Link](#project-link)
-  - [Getting started](#getting-started)
-  - [Set up the database](#set-up-the-database)
-  - [Description](#description)
-  - [What did we do?](#what-did-we-do)
-  - [Running the project](#running-the-project)
-  - [Screenshots](#screenshots)
+- [Project Link](#project-link)
+- [Getting started](#getting-started)
+- [Set up the database](#set-up-the-database)
+- [Description](#description)
+- [What did we do?](#what-did-we-do)
+- [Running the project](#running-the-project)
+- [Screenshots](#screenshots)
 
 ## Project Link
 
@@ -35,8 +32,12 @@ CREATE DATABASE workout_db
 
 ## Description
 
-Our task was to build a Tech Blog which will follow the MVC paradigm in its architectural structure, using Handlebars.js a template language, Sequelize as the ORM, and the express-session npm package for authentication. In this blog you will be able to add posts, delete and edit them. Also to add new comments, to delete and to update them.
-Happy navigation!
+Our task was to develop the back-end site so that as a user, I want to be able to view create and track daily workouts.
+As a user I also want to be able to log multiple exercises in a workout on a given day.
+As a user I should also be able to track the name, type, weight, sets, reps, and duration of exercise. As a user and as a cardio lover I should be able to track my distance traveled once I have performed a cardio exercise.
+
+Happy fit workout!
+Don't forget also to stretch :rocket: !
 
 ## What did we do?
 
