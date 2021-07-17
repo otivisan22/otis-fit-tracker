@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../db");
 
-const { DB_URL, MONGOOSE_OPTIONS } = require("../seeders/config");
+const { DB_URL, MONGOOSE_OPTIONS } = require("../config");
 
 mongoose.connect(DB_URL, MONGOOSE_OPTIONS);
 

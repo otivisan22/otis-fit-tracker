@@ -2,7 +2,7 @@ const express = require("express");
 
 const path = require("path");
 
-const { connect } = require("./seeders/db");
+const { connect } = require("./db");
 
 const routes = require("./routes");
 
