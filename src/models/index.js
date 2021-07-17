@@ -1,3 +1,3 @@
-const Workout = require("./Workout");
+const Workout = require("./Workout1");
 
 module.exports = { Workout };
