@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../db");
+const db = require("../models");
 
 const { DB_URL, MONGOOSE_OPTIONS } = require("../config");
 

@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 4004;
 
-const DB_NAME = "workout_Db";
+const DB_NAME = "workout";
 
 const DB_URL = process.env.MONGODB_URI || `mongodb://localhost/${DB_NAME}`;
 
