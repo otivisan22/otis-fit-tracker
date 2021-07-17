@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../seeders/db");
+const db = require("../db");
 
 const { DB_URL, MONGOOSE_OPTIONS } = require("../seeders/config");
 
