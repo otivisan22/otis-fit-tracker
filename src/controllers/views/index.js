@@ -1,15 +1,26 @@
 const path = require("path");
 
 const renderHomePage = (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/index.html"));
+  try {
+    res.sendFile(path.join(__dirname, "../../public/index.html"));
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const renderExercisePage = (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/exercise.html"));
+  try {
+    res.sendFile(path.join(__dirname, "../../public/exercise.html"));
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const renderStatsPage = (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/stats.html"));
+  try {
+    res.sendFile(path.join(__dirname, "../../public/stats.html"));
+  } catch (error) {}
+  console.log(error.message);
 };
 
 module.exports = {
