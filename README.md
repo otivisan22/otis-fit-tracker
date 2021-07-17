@@ -56,10 +56,6 @@ $ npm run dev
 
 ## Screenshots
 
-![screenshots1](public/images/image1.png/)
-![screenshots2](public/images/image2.png/)
-![screenshots3](public/images/image3.png/)
-![screenshots4](public/images/image4.png/)
-![screenshots5](public/images/image5.png/)
-![screenshots6](public/images/image6.png/)
-![screenshots7](public/images/image7.png/)
+![screenshots1](src/public/images/image1.png/)
+![screenshots2](src/public/images/image2.png/)
+![screenshots3](src/public/images/image3.png/)
