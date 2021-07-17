@@ -19,8 +19,9 @@ const renderExercisePage = (req, res) => {
 const renderStatsPage = (req, res) => {
   try {
     res.sendFile(path.join(__dirname, "../../public/stats.html"));
-  } catch (error) {}
-  console.log(error.message);
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 module.exports = {
