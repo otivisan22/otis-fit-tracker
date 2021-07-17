@@ -22,12 +22,12 @@ Click [here](https://guarded-tundra-70978.herokuapp.com/) to view the project on
 
 ## Set up the database
 
-In Mongoose Workbench
+In Robot 3T Workbench
 
 ```
-DROP DATABASE IF EXISTS workout_db;
+DROP DATABASE IF EXISTS workout;
 
-CREATE DATABASE workout_db
+CREATE DATABASE workout;
 ```
 
 ## Description
