@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "seed": "npm sun seed && node src/seeders/seed.js",
-    "start": "node src/server.js"
+    "seed": "node src/seeders/seed.js",
+    "start": "npm run seed && node src/server.js"
   },
   "repository": {
     "type": "git",
