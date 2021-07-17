@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const { DB_URL, MONGOOSE_OPTIONS } = require("./config");
+const { DB_URL, MONGOOSE_OPTIONS } = require("../seeders/config");
 
 const connect = async () => {
   try {
